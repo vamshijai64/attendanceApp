@@ -1,0 +1,155 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modalContent {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+h3 {
+  font-size: 20px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.text label {
+  display: block;
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.text input[type="text"] {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333333;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.button button {
+  width: 100%;
+  max-width: 120px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.button button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.button button:active {
+  background-color: #003f7f;
+  transform: scale(1);
+}
+
+.error-message {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: #28a745;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.closeBtn {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 120px;
+  padding: 8px 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.closeBtn:hover {
+  background-color: #450e13;
+}
+
+@media (max-width: 480px) {
+  .modalContent {
+      padding: 15px;
+  }
+
+  h3 {
+      font-size: 18px;
+  }
+
+  .text input[type="text"] {
+      padding: 8px 12px;
+      font-size: 12px;
+  }
+
+  .button button {
+      max-width: 100px;
+      font-size: 12px;
+      padding: 8px 12px;
+  }
+
+  .closeBtn {
+      font-size: 12px;
+      padding: 6px 15px;
+  }
+
+  .error-message,
+  .success-message {
+      font-size: 12px;
+  }
+}

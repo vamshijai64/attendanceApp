@@ -1,0 +1,218 @@
+.attendanceTable {
+    margin: 20px 0;
+    width: 90%;
+    max-width: 1500px;
+    text-align: center;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    .modalHeader {
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 20px;
+        width: 98%;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        @media (max-width: 768px) {
+            font-size: 1em;
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.8em; /* Default for readability */
+        @media (max-width: 768px) {
+            font-size: 0.7em; /* Adjust font size for smaller screens */
+        }
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 5px;
+        text-align: center;
+        vertical-align: middle;
+        @media (max-width: 768px) {
+            padding: 3px;
+        }
+    }
+
+    th {
+        background-color: #f4f4f4;
+    }
+
+    td:nth-child(1) {
+        background-color: #f9f9f9;
+    }
+
+    .status {
+        width: 18px;
+        height: 18px;
+        border-radius: 70%;
+        display: inline-block;
+        text-align: center;
+        line-height: 18px;
+        font-size: 0.75em;
+        color: white;
+    }
+
+    .present {
+        background-color: #28a745;
+        border-radius: 70%;
+
+    }
+
+    .absent {
+        background-color: #dc3545;
+        border-radius: 70%;
+
+    }
+
+    .Halfday {
+        background-color: #dd810a;
+        border-radius: 70%;
+
+    }
+
+    .na {
+        color: #a1a1a1;
+        opacity: 0.7;
+    }
+
+    .controls {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    .searchBar {
+        width: 60%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
+    .searchButton {
+        padding: 8px 15px;
+        background-color: #134414;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+        margin-right: 180px;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        &:hover {
+            background-color: #113a1a;
+        }
+    }
+
+    .dropdown {
+        padding: 2px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 1em;
+        min-width: 110px;
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+
+    .employeeDetails {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        color: #135b42;
+        font-size: 1em;
+    }
+
+    .leaveInfo {
+        background-color: rgba(36, 113, 67, 0.4);
+        padding: 18px;
+        margin-top: 18px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 6px rgba(91, 101, 55, 0.1);
+        width: 50%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16px;
+        @media (max-width: 768px) {
+            width: 90%;
+            font-size: 14px;
+        }
+    }
+
+    .leaveInfo h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .leaveInfo p {
+        font-size: 16px;
+        margin: 5px 0;
+        color: #337b0d;
+    }
+
+    .leaveInfo p strong {
+        color: #6e6e1f;
+    }
+
+    @media (max-width: 768px) {
+        .modalHeader {
+            font-size: 1.1em;
+        }
+
+        .controls {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .searchBar,
+        .searchButton,
+        .dropdown {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .attendanceTable {
+            font-size: 0.6em;
+        }
+
+        .leaveInfo {
+            font-size: 12px;
+        }
+
+        .controls {
+            display: block;
+        }
+
+        .searchButton {
+            margin-right: 0;
+        }
+    }
+}

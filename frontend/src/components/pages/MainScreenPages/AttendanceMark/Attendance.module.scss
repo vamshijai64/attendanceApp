@@ -1,0 +1,288 @@
+/* Default styles for larger screens */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 28%;
+    transform: translate(0, -50%);
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(251, 0, 255, 0.584);
+    width: 60%;
+    max-width: 900px;
+    padding: 1rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.dateDisplay {
+    font-size: 16px;
+    color: #5f3911;
+    font-weight: bold;
+}
+
+.modalHeader {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.attendance {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    width: 100%;
+}
+
+.tableHeader {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr 1fr;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.tableBody {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.tableRow {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr 1fr;
+    align-items: center;
+    background-color: #fff;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.tableRow span {
+    text-align: center;
+}
+
+.statusButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentButton,
+.absentButton {
+    width: 70px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.absentButton {
+    background-color: #f44336;
+}
+
+.presentButton:hover,
+.absentButton:hover {
+    opacity: 0.9;
+}
+
+.activeButton {
+    background-color: #4caf50;
+    color: white;
+}
+
+.status {
+    font-weight: bold;
+    padding: 4px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 17px;
+}
+
+.present {
+    color: #0f7026;
+}
+
+.absent {
+    color: #dc3545;
+}
+
+.halfDay {
+    color: #ffc107;
+}
+
+.checkInButton {
+    padding: 4px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #114018;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.checkOutButton {
+    padding: 4px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #a01717;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.checkedButton {
+    background-color: #e0e0e0;
+    color: #000000;
+    border: none;
+    padding: 5px 10px;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: default;
+    text-align: center;
+    width: auto;
+}
+
+.checkedButton:disabled {
+    background-color: #cccccc;
+    color: #333;
+}
+
+.leaveDropdown {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+}
+
+.deleteButton {
+    color: #ff4d4f;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.deleteButton:hover {
+    color: #d9363e;
+    transform: scale(1.1);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.deleteButton:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .modal {
+        left: 50%; /* Center modal horizontally */
+        width: 80%; /* Increase width on smaller screens */
+        max-width: 100%; /* Remove max-width restriction */
+        padding: 0.8rem; /* Adjust padding */
+    }
+
+    .modalHeader {
+        font-size: 18px;
+    }
+
+    .tableHeader, .tableRow {
+        font-size: 12px;
+        padding: 6px 10px; /* Adjust padding */
+    }
+
+    .attendance {
+        gap: 5px; /* Reduce gap between elements */
+    }
+
+    .presentButton,
+    .absentButton {
+        width: 60px; /* Smaller button size on smaller screens */
+        font-size: 10px; /* Smaller font size */
+        padding: 4px 6px;
+    }
+
+    .status {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .leaveDropdown {
+        font-size: 12px; /* Smaller font size */
+        padding: 4px 8px;
+    }
+
+    .deleteButton {
+        font-size: 1.2rem; /* Smaller delete button */
+    }
+}
+
+@media (max-width: 480px) {
+    .modal {
+        width: 90%; /* Almost full width on very small screens */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .modalHeader {
+        font-size: 16px;
+    }
+
+    .attendance {
+        gap: 4px; /* Further reduce gap */
+    }
+
+    .tableHeader, .tableRow {
+        font-size: 10px; /* Even smaller font size */
+        padding: 5px 8px;
+    }
+
+    .presentButton,
+    .absentButton {
+        width: 50px; /* Even smaller button width */
+        font-size: 9px;
+        padding: 3px 6px;
+    }
+
+    .status {
+        font-size: 13px; /* Smaller font size */
+    }
+
+    .checkInButton,
+    .checkOutButton {
+        font-size: 10px; /* Smaller button font size */
+    }
+
+    .deleteButton {
+        font-size: 1rem; /* Reduce delete button size */
+    }
+}

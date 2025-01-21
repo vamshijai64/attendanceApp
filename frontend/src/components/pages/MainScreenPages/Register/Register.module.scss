@@ -1,0 +1,141 @@
+.register {
+    position: fixed;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 20px 20px rgba(186, 13, 177, 0.2);
+    width: 80%; /* Adjusted for better responsiveness */
+    max-width: 800px; /* Restrict maximum width */
+    padding: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+        width: 90%; /* Expand width for smaller screens */
+        padding: 15px; /* Reduce padding */
+        gap: 10px; /* Reduce gap for compact layout */
+    }
+
+    @media (max-width: 480px) {
+        width: 95%; /* Full width for very small screens */
+        padding: 10px; /* Further reduce padding */
+    }
+}
+
+h2 {
+    font-size: 1.5rem; /* Use relative units for scaling */
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+
+    @media (max-width: 768px) {
+        font-size: 1.2rem; /* Smaller font for smaller screens */
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1rem;
+    }
+}
+
+p {
+    font-size: 0.9rem; /* Responsive font size */
+    color: #431447; /* Success color */
+    text-align: center;
+    font-weight: bold;
+
+    @media (max-width: 768px) {
+        font-size: 0.8rem;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @media (max-width: 768px) {
+        gap: 10px; /* Reduce gap for compact layout */
+    }
+}
+
+label {
+    font-size: 0.9rem; /* Responsive label font size */
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    @media (max-width: 768px) {
+        font-size: 0.8rem;
+    }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"] {
+    padding: 10px;
+    font-size: 0.9rem; /* Use relative font size */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+
+    &:focus {
+        border-color: #114217;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    }
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    background-color: #0c370e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+
+    &:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 0.8rem; /* Adjust font size */
+        padding: 8px 15px; /* Adjust padding */
+    }
+}
+
+input:required {
+    background-color: #f9f9f9; /* Subtle background color for required fields */
+}
+
+label {
+    font-size: 0.9rem; /* Responsive font size */
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left; /* Ensure text is left-aligned */
+
+    @media (max-width: 768px) {
+        font-size: 0.8rem;
+    }
+}

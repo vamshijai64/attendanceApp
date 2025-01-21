@@ -1,0 +1,205 @@
+/* General Styles */
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #f8eded, #e3f2fd);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 102, 178, 0.1);
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0e2a3f;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    width: calc(100% - 60px);
+}
+
+.modal {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #020202;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.modal label {
+    display: block;
+    font-size: 16px;
+    color: #3f123a;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+.modal input[type="text"],
+.modal input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+}
+
+.modal input[type="text"]:focus,
+.modal input[type="password"]:focus {
+    border-color: #0066b2;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 102, 178, 0.5);
+}
+
+/* General button styles for the submit button */
+.modal button {
+    background-color: #0b2030;
+    color: #ffffff;
+    padding: 12px;
+    width: 120px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+}
+
+.modal button:hover {
+    background-color: #004080;
+}
+
+/* Styles specifically for the Forgot Password link-like button */
+// .forgotPasswordButton {
+//     text-align: center; /* Align text in the center */
+//     margin-top: 15px;
+// }
+
+// .forgotPasswordButton button {
+//     all: unset; /* Reset all inherited button styles */
+//     color: #007bff; /* Blue link color */
+//     cursor: pointer;
+//     text-decoration: underline;
+//     font-size: 14px;
+//     font-weight: normal; /* Normal font weight for link-like appearance */
+//     transition: color 0.3s ease;
+// }
+
+// .forgotPasswordButton button:hover {
+//     color: #ffffff; /* Darker blue on hover */
+//     text-decoration: none; /* No underline on hover */
+// }
+
+// .forgotPasswordButton button:active {
+//     color: #003a75; /* Even darker blue on active */
+// }
+
+/* ForgotPassword.module.css */
+.forgotPasswordButton {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    cursor: pointer;
+  }
+  
+  .forgotPasswordButton:hover .forgotPasswordText {
+    //text-decoration: underline; /* Underline text on hover */
+    color: #184d27; /* Change text color */
+  }
+  
+  .forgotPasswordText {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; /* Default text color */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+
+.error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        font-size: 20px;
+        padding: 12px 24px;
+    }
+
+    .modal {
+        padding: 20px;
+    }
+
+    .modal input[type="text"],
+    .modal input[type="password"] {
+        max-width: 350px;
+    }
+
+    .modal p {
+        font-size: 16px;
+    }
+
+    .modal button {
+        width: 100px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 18px;
+    }
+
+    .modal {
+        padding: 15px;
+    }
+
+    .modal input[type="text"],
+    .modal input[type="password"] {
+        max-width: 100%;
+    }
+
+    .modal p {
+        font-size: 14px;
+    }
+
+    .modal button {
+        width: 80px;
+        font-size: 12px;
+    }
+}

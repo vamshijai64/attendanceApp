@@ -1,0 +1,45 @@
+.mainContent {
+    border-radius: 20px;
+    background-color: #ffffff;
+    position: fixed;
+    top: 45px;
+    left: 210px;
+    height: calc(100% - 75px); /* Dynamically adjust height */
+    width: calc(100% - 210px); /* Adjust width to fit the remaining space */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: black;
+    font-size: 1rem; /* Use relative units for font size */
+    z-index: 101;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    overflow-y: auto; /* Scrollable content if necessary */
+    border: 1px solid #ddd; /* Optional border */
+    box-sizing: border-box; /* Include padding and border in width/height */
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+        left: 150px; /* Adjust sidebar space */
+        width: calc(100% - 150px);
+        padding: 15px; /* Reduce padding */
+        font-size: 0.9rem; /* Slightly smaller text */
+    }
+
+    @media (max-width: 768px) {
+        left: 0; /* Sidebar collapses or overlays */
+        top: 55px; /* Adjust for header height */
+        width: 100%; /* Full width */
+        height: calc(100% - 55px);
+        padding: 10px;
+        font-size: 0.8rem; /* Smaller text size */
+        border-radius: 10px;
+    }
+
+    @media (max-width: 480px) {
+        top: 60px; /* Extra space for mobile header */
+        padding: 5px;
+        font-size: 0.75rem; /* Smaller text size */
+        gap: 10px; /* Reduce gaps between items */
+    }
+}

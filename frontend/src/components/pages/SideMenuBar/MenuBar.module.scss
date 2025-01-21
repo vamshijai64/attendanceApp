@@ -1,0 +1,96 @@
+.menubar {
+    padding: 20px;
+    background-color: #0066b2;
+    font-family: Arial, sans-serif;
+    border-radius: 0px;
+    position: fixed;
+    top: 40px; /* Place MenuBar directly below the Header */
+    left: 0;
+    height: calc(100% - 40px); /* Occupy the remaining height below the Header */
+    width: 220px;
+    box-sizing: border-box; /* Include padding in dimensions */
+    z-index: 100;
+
+    h1 {
+        margin-bottom: 10px;
+        color: #ffffff;
+        text-align: center;
+        font-size: 1.5rem;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            margin: 10px auto 0;
+            width: 70%;
+            height: 5px;
+            background-color: #f4f3f6;
+            border-radius: 10px;
+        }
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        p {
+            display: flex;
+            align-items: center;
+            margin: 13px 0;
+            cursor: pointer;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 8px 0;
+            border-radius: 10px;
+            transition: background-color 0.3s, color 0.3s;
+
+            &:hover {
+                color: #6c8188;
+            }
+
+            svg {
+                font-size: 1.5rem;
+                margin-right: 10px;
+                margin-left: 0;
+            }
+        }
+    }
+
+
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        width: 150px; /* Narrower menu for smaller screens */
+        height: auto; /* Allow height to adjust to content */
+
+        h1 {
+            font-size: 1.2rem; /* Smaller font size for header */
+        }
+
+        nav p {
+            font-size: 0.9rem; /* Reduce font size */
+            svg {
+                font-size: 1.2rem; /* Adjust icon size */
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        width: 100%; /* Full-width menu for very small screens */
+        height: auto; /* Adjust height */
+        position: relative; /* Make it scrollable if necessary */
+
+        nav {
+            flex-direction: row; /* Display menu items in a row */
+            flex-wrap: wrap; /* Allow wrapping */
+            justify-content: space-around; /* Space items evenly */
+        }
+
+        nav p {
+            font-size: 0.8rem; /* Further reduce font size */
+            margin: 10px; /* Adjust margin */
+        }
+    }
+}

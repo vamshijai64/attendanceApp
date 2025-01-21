@@ -1,0 +1,157 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(48, 4, 42, 0.726);
+    width: 90%;
+    max-width: 950px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+
+    .modalHeader {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+        text-align: center;
+    }
+
+    .tableHeader {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 2fr 2fr 3fr 1fr;
+        font-weight: bold;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        background-color: #f1f1f1;
+        text-align: center;
+    }
+
+    .tableBody {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tableRow {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 2fr 2fr 3fr 1fr;
+        padding: 10px;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+
+        span {
+            text-align: center;
+        }
+
+        button {
+            padding: 5px 12px;
+            background-color: #ffffff;
+            color: #484910;
+            border: 2px solid #154e1d;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #154e1d;
+                color: #ffffff;
+            }
+        }
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 10px;
+
+        button {
+            padding: 8px 12px;
+            background-color: #ffffff;
+            color: #3f0e3d;
+            border: 2px solid #3f0e3d;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: #3f0e3d;
+                color: #ffffff;
+            }
+        }
+
+        .activePage {
+            background-color: #3f0e3d;
+            color: #ffffff;
+        }
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 1200px) {
+        max-width: 80%; /* Reduce max width on large tablets and small desktops */
+        padding: 15px;
+        
+        .modalHeader {
+            font-size: 1.3rem; /* Adjust font size */
+        }
+
+        .tableHeader,
+        .tableRow {
+            grid-template-columns: 0.5fr 1fr 2fr 2fr 2fr 1fr; /* Adjust columns on medium screens */
+        }
+
+        .pagination button {
+            padding: 6px 10px; /* Slightly smaller buttons */
+        }
+    }
+
+    @media (max-width: 768px) {
+        max-width: 90%; /* Reduce the width on tablets */
+        padding: 10px;
+
+        .modalHeader {
+            font-size: 1.2rem; /* Smaller header text */
+        }
+
+        .tableHeader,
+        .tableRow {
+            grid-template-columns: 0.5fr 1fr 1.5fr 1.5fr 2.5fr 1fr; /* Adjust columns for tablets */
+        }
+
+        .pagination button {
+            padding: 5px 8px; /* Further reduce button size */
+        }
+    }
+
+    @media (max-width: 480px) {
+        max-width: 100%; /* Full width on mobile */
+        padding: 8px;
+        top: 5%; /* Give some margin from the top */
+        transform: translate(-50%, 0); /* Remove vertical centering on small screens */
+
+        .modalHeader {
+            font-size: 1rem; /* Smaller header text */
+        }
+
+        .tableHeader,
+        .tableRow {
+            grid-template-columns: 0.5fr 1fr 1.5fr 1.5fr 2fr 1fr; /* Adjust columns for small screens */
+        }
+
+        .pagination {
+            flex-direction: column; /* Stack pagination buttons vertically */
+            gap: 5px;
+        }
+
+        .pagination button {
+            padding: 4px 6px; /* Smaller buttons for mobile */
+        }
+    }
+}
